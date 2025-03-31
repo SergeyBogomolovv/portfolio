@@ -1,6 +1,21 @@
-import { RxDiscordLogo, RxGithubLogo } from 'react-icons/rx'
+import { RxGithubLogo } from 'react-icons/rx'
 
 import { FaYoutube } from 'react-icons/fa'
+import { BsTelegram } from 'react-icons/bs'
+import { IoMail } from 'react-icons/io5'
+
+const socials = [
+  {
+    label: 'Github',
+    Icon: RxGithubLogo,
+    href: 'https://github.com/SergeyBogomolovv',
+  },
+  {
+    label: 'Youtube',
+    Icon: FaYoutube,
+    href: 'https://www.youtube.com/@geraxfn',
+  },
+]
 
 export default function Footer() {
   return (
@@ -9,44 +24,43 @@ export default function Footer() {
         <div className='size-full flex flex-row items-center justify-around flex-wrap'>
           <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
             <div className='font-bold text-lg'>Community</div>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <FaYoutube />
-              <span className='text-[15px] ml-1.5'>Youtube</span>
-            </p>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <RxGithubLogo />
-              <span className='text-[15px] ml-1.5'>Github</span>
-            </p>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <RxDiscordLogo />
-              <span className='text-[15px] ml-1.5'>Discord</span>
-            </p>
+            {socials.map(({ href, label, Icon }, i) => (
+              <a
+                target='_blank'
+                key={i}
+                href={href}
+                className='flex flex-row items-center my-2 md:my-4 cursor-pointer'
+              >
+                <Icon />
+                <span className='text-[15px] ml-1.5'>{label}</span>
+              </a>
+            ))}
           </div>
           <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
-            <div className='font-bold text-lg'>Social Media</div>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <FaYoutube />
-              <span className='text-[15px] ml-1.5'>Instagram</span>
-            </p>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <RxGithubLogo />
-              <span className='text-[15px] ml-1.5'>Twitter</span>
-            </p>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <RxDiscordLogo />
-              <span className='text-[15px] ml-1.5'>Linkedin</span>
-            </p>
+            <div className='font-bold text-lg'>Contact</div>
+            <a
+              target='_blank'
+              href='https://t.me/grekassoq'
+              className='flex flex-row items-center my-2 md:my-4 cursor-pointer'
+            >
+              <BsTelegram />
+              <span className='text-[15px] ml-1.5'>Telegram</span>
+            </a>
+            <a
+              href='mailto:bogomolovs693@gmail.com'
+              className='flex flex-row items-center my-2 md:my-4 cursor-pointer'
+            >
+              <IoMail />
+              <span className='text-[15px] ml-1.5'>Email</span>
+            </a>
           </div>
           <div className='min-w-[200px] h-auto flex flex-col items-center justify-start'>
             <div className='font-bold text-lg'>About</div>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
+            <p className='flex flex-row items-center my-2 md:my-4 cursor-pointer'>
               <span className='text-[15px] ml-1.5'>Become Sponsor</span>
             </p>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
+            <p className='flex flex-row items-center my-2 md:my-4 cursor-pointer'>
               <span className='text-[15px] ml-1.5'>Learning about me</span>
-            </p>
-            <p className='flex flex-row items-center my-4 cursor-pointer'>
-              <span className='text-[15px] ml-1.5'>bogomolovs693@gmail.com</span>
             </p>
           </div>
         </div>
