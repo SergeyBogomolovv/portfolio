@@ -2,7 +2,7 @@ import ProjectCard from './project-card'
 
 export default function Projects() {
   return (
-    <section id='projects' className='flex flex-col items-center justify-center py-20 z-20'>
+    <section id='projects' className='flex flex-col items-center justify-center md:py-20 z-20'>
       <h1 className='text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10'>
         Мои проекты
       </h1>
