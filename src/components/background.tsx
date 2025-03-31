@@ -47,6 +47,21 @@ function StarBackground(props: StarBackgroundProps) {
 }
 
 const StarsCanvas = () => {
+  const [webglSupported, setWebglSupported] = useState(false)
+
+  useEffect(() => {
+    const canvas = document.createElement('canvas')
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+    if (gl) {
+      setWebglSupported(true)
+    }
+  }, [])
+
+  if (!webglSupported) {
+    return (
+      <div className='w-full h-auto fixed inset-0 z-[20] bg-gradient-to-b from-black to-gray-900' />
+    )
+  }
   return (
     <div className='w-full h-auto fixed inset-0 z-[20]'>
       <Canvas camera={{ position: [0, 0, 1] }}>
