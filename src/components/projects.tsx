@@ -8,19 +8,22 @@ export default function Projects() {
       </h1>
       <div className='h-full w-full flex flex-col md:flex-row gap-10 px-10'>
         <ProjectCard
-          src='/NextWebsite.png'
+          link='https://github.com/SergeyBogomolovv/profile-manager'
+          src='/profile-manager.png'
           title='Менеджер профилей'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          description='Микросервисное приложение для управления профилями. Включает SSO, телеграм бота и gRPC API.'
         />
         <ProjectCard
-          src='/CardImage.png'
+          link='https://github.com/SergeyBogomolovv/grekasgram'
+          src='/messenger.png'
           title='Онлайн мессенджер'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          description='Fullstack онлайн мессенджер на socket.io, nest и next.'
         />
         <ProjectCard
-          src='/SpaceWebsite.png'
+          link='https://github.com/SergeyBogomolovv/fitflow'
+          src='/tgbot.png'
           title='Телеграм бот'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+          description='Телеграм бот для тренировок и REST API для управления постами.'
         />
       </div>
     </section>
