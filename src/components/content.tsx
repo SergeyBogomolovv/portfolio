@@ -18,7 +18,7 @@ export default function HeroContent() {
             className='Welcome-box py-2 px-3 border border-[#7042f88b] opacity-[0.9]'
           >
             <SparklesIcon className='text-[#b49bff] mr-2.5 h-5 w-5' />
-            <h1 className='Welcome-text text-sm'>Ксюшка просто пушка</h1>
+            <h1 className='Welcome-text text-sm'>Fullstack Developer Portfolio</h1>
           </motion.div>
 
           <motion.div
@@ -26,12 +26,12 @@ export default function HeroContent() {
             className='flex flex-col gap-6 mt-6 md:text-6xl text-5xl font-bold text-white max-w-[600px] size-auto'
           >
             <span>
-              Амина
+              Turning ideas into
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500'>
                 {' '}
-                лучшая{' '}
+                interactive{' '}
               </span>
-              и крутая
+              reality
             </span>
           </motion.div>
 

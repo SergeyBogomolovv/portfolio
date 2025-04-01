@@ -13,7 +13,7 @@ interface StarBackgroundProps {
 function StarBackground(props: StarBackgroundProps) {
   const ref = useRef<Group | null>(null)
   const [sphere] = useState(
-    () => inSphere(new Float32Array(5000 * 3), { radius: 1.2 }) as Float32Array,
+    () => inSphere(new Float32Array(500 * 3), { radius: 1.2 }) as Float32Array,
   )
   const [mouse, setMouse] = useState({ x: 0, y: 0 })
 
